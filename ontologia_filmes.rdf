@@ -1,0 +1,1791 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://example.org/ontologia_filmes#"
+     xml:base="http://example.org/ontologia_filmes"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://example.org/ontologia_filmes"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#minCardinality -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#minCardinality"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.org/ontologia_filmes#hasAward -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/ontologia_filmes#hasAward">
+        <rdfs:domain rdf:resource="http://example.org/ontologia_filmes#Filme"/>
+        <rdfs:range rdf:resource="http://example.org/ontologia_filmes#Premio"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#hasDirector -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/ontologia_filmes#hasDirector">
+        <rdfs:domain rdf:resource="http://example.org/ontologia_filmes#Filme"/>
+        <rdfs:range rdf:resource="http://example.org/ontologia_filmes#Diretor"/>
+        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#hasGenre -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/ontologia_filmes#hasGenre">
+        <rdfs:domain rdf:resource="http://example.org/ontologia_filmes#Filme"/>
+        <rdfs:range rdf:resource="http://example.org/ontologia_filmes#Tema"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#hasInterpreter -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/ontologia_filmes#hasInterpreter">
+        <rdfs:domain rdf:resource="http://example.org/ontologia_filmes#Filme"/>
+        <rdfs:range rdf:resource="http://example.org/ontologia_filmes#Interprete"/>
+        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#hasProducer -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/ontologia_filmes#hasProducer">
+        <rdfs:domain rdf:resource="http://example.org/ontologia_filmes#Filme"/>
+        <rdfs:range rdf:resource="http://example.org/ontologia_filmes#Produtor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#hasRating -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/ontologia_filmes#hasRating">
+        <rdfs:domain rdf:resource="http://example.org/ontologia_filmes#Usuario"/>
+        <rdfs:range rdf:resource="http://example.org/ontologia_filmes#Avaliacao"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#hasWriter -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/ontologia_filmes#hasWriter">
+        <rdfs:domain rdf:resource="http://example.org/ontologia_filmes#Filme"/>
+        <rdfs:range rdf:resource="http://example.org/ontologia_filmes#Roteirista"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#prefersGenre -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/ontologia_filmes#prefersGenre">
+        <rdfs:domain rdf:resource="http://example.org/ontologia_filmes#Usuario"/>
+        <rdfs:range rdf:resource="http://example.org/ontologia_filmes#Tema"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#prefersInterpreter -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/ontologia_filmes#prefersInterpreter">
+        <rdfs:domain rdf:resource="http://example.org/ontologia_filmes#Usuario"/>
+        <rdfs:range rdf:resource="http://example.org/ontologia_filmes#Interprete"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#ratesMovie -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/ontologia_filmes#ratesMovie">
+        <rdfs:domain rdf:resource="http://example.org/ontologia_filmes#Avaliacao"/>
+        <rdfs:range rdf:resource="http://example.org/ontologia_filmes#Filme"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.org/ontologia_filmes#age -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontologia_filmes#age">
+        <rdfs:domain rdf:resource="http://example.org/ontologia_filmes#Usuario"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#awardName -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontologia_filmes#awardName">
+        <rdfs:domain rdf:resource="http://example.org/ontologia_filmes#Premio"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#email -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontologia_filmes#email">
+        <rdfs:domain rdf:resource="http://example.org/ontologia_filmes#Usuario"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#nationality -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontologia_filmes#nationality">
+        <rdfs:domain rdf:resource="http://example.org/ontologia_filmes#Filme"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#originalLanguage -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontologia_filmes#originalLanguage">
+        <rdfs:domain rdf:resource="http://example.org/ontologia_filmes#Filme"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#originalTitle -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontologia_filmes#originalTitle">
+        <rdfs:domain rdf:resource="http://example.org/ontologia_filmes#Filme"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#personName -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontologia_filmes#personName">
+        <rdfs:domain rdf:resource="http://example.org/ontologia_filmes#Pessoa"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#portugueseTitle -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontologia_filmes#portugueseTitle">
+        <rdfs:domain rdf:resource="http://example.org/ontologia_filmes#Filme"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#productionYear -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontologia_filmes#productionYear">
+        <rdfs:domain rdf:resource="http://example.org/ontologia_filmes#Filme"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#ratingValue -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontologia_filmes#ratingValue">
+        <rdfs:domain rdf:resource="http://example.org/ontologia_filmes#Avaliacao"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:minInclusive>
+                    </rdf:Description>
+                    <rdf:Description>
+                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</xsd:maxInclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#releaseYear -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontologia_filmes#releaseYear">
+        <rdfs:domain rdf:resource="http://example.org/ontologia_filmes#Filme"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#themeName -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontologia_filmes#themeName">
+        <rdfs:domain rdf:resource="http://example.org/ontologia_filmes#Tema"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#userName -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontologia_filmes#userName">
+        <rdfs:domain rdf:resource="http://example.org/ontologia_filmes#Usuario"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#whatsapp -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ontologia_filmes#whatsapp">
+        <rdfs:domain rdf:resource="http://example.org/ontologia_filmes#Usuario"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.org/ontologia_filmes#Avaliacao -->
+
+    <owl:Class rdf:about="http://example.org/ontologia_filmes#Avaliacao"/>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#Diretor -->
+
+    <owl:Class rdf:about="http://example.org/ontologia_filmes#Diretor">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontologia_filmes#Pessoa"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#Filme -->
+
+    <owl:Class rdf:about="http://example.org/ontologia_filmes#Filme"/>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#Interprete -->
+
+    <owl:Class rdf:about="http://example.org/ontologia_filmes#Interprete">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontologia_filmes#Pessoa"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#Pessoa -->
+
+    <owl:Class rdf:about="http://example.org/ontologia_filmes#Pessoa"/>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#Premio -->
+
+    <owl:Class rdf:about="http://example.org/ontologia_filmes#Premio"/>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#Produtor -->
+
+    <owl:Class rdf:about="http://example.org/ontologia_filmes#Produtor">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontologia_filmes#Pessoa"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#Roteirista -->
+
+    <owl:Class rdf:about="http://example.org/ontologia_filmes#Roteirista">
+        <rdfs:subClassOf rdf:resource="http://example.org/ontologia_filmes#Pessoa"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#Tema -->
+
+    <owl:Class rdf:about="http://example.org/ontologia_filmes#Tema"/>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#Usuario -->
+
+    <owl:Class rdf:about="http://example.org/ontologia_filmes#Usuario"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.org/ontologia_filmes#acao -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#acao">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Tema"/>
+        <themeName>Ação</themeName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#alPacino -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#alPacino">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Interprete"/>
+        <personName>Al Pacino</personName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#alfredHitchcock -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#alfredHitchcock">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Diretor"/>
+        <personName>Alfred Hitchcock</personName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#anneHathaway -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#anneHathaway">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Interprete"/>
+        <personName>Anne Hathaway</personName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#avaliacao1 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#avaliacao1">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Avaliacao"/>
+        <ratesMovie rdf:resource="http://example.org/ontologia_filmes#filme1"/>
+        <ratingValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ratingValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#avaliacao10 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#avaliacao10">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Avaliacao"/>
+        <ratesMovie rdf:resource="http://example.org/ontologia_filmes#filme7"/>
+        <ratingValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ratingValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#avaliacao11 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#avaliacao11">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Avaliacao"/>
+        <ratesMovie rdf:resource="http://example.org/ontologia_filmes#filme8"/>
+        <ratingValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ratingValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#avaliacao12 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#avaliacao12">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Avaliacao"/>
+        <ratesMovie rdf:resource="http://example.org/ontologia_filmes#filme9"/>
+        <ratingValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ratingValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#avaliacao13 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#avaliacao13">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Avaliacao"/>
+        <ratesMovie rdf:resource="http://example.org/ontologia_filmes#filme5"/>
+        <ratingValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ratingValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#avaliacao14 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#avaliacao14">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Avaliacao"/>
+        <ratesMovie rdf:resource="http://example.org/ontologia_filmes#filme11"/>
+        <ratingValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ratingValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#avaliacao15 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#avaliacao15">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Avaliacao"/>
+        <ratesMovie rdf:resource="http://example.org/ontologia_filmes#filme1"/>
+        <ratingValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ratingValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#avaliacao16 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#avaliacao16">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Avaliacao"/>
+        <ratesMovie rdf:resource="http://example.org/ontologia_filmes#filme2"/>
+        <ratingValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ratingValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#avaliacao17 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#avaliacao17">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Avaliacao"/>
+        <ratesMovie rdf:resource="http://example.org/ontologia_filmes#filme4"/>
+        <ratingValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ratingValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#avaliacao18 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#avaliacao18">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Avaliacao"/>
+        <ratesMovie rdf:resource="http://example.org/ontologia_filmes#filme6"/>
+        <ratingValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ratingValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#avaliacao19 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#avaliacao19">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Avaliacao"/>
+        <ratesMovie rdf:resource="http://example.org/ontologia_filmes#filme8"/>
+        <ratingValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ratingValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#avaliacao2 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#avaliacao2">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Avaliacao"/>
+        <ratesMovie rdf:resource="http://example.org/ontologia_filmes#filme2"/>
+        <ratingValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ratingValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#avaliacao20 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#avaliacao20">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Avaliacao"/>
+        <ratesMovie rdf:resource="http://example.org/ontologia_filmes#filme11"/>
+        <ratingValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ratingValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#avaliacao21 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#avaliacao21">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Avaliacao"/>
+        <ratesMovie rdf:resource="http://example.org/ontologia_filmes#filme13"/>
+        <ratingValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ratingValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#avaliacao22 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#avaliacao22">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Avaliacao"/>
+        <ratesMovie rdf:resource="http://example.org/ontologia_filmes#filme4"/>
+        <ratingValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ratingValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#avaliacao23 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#avaliacao23">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Avaliacao"/>
+        <ratesMovie rdf:resource="http://example.org/ontologia_filmes#filme1"/>
+        <ratingValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ratingValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#avaliacao24 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#avaliacao24">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Avaliacao"/>
+        <ratesMovie rdf:resource="http://example.org/ontologia_filmes#filme10"/>
+        <ratingValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ratingValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#avaliacao25 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#avaliacao25">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Avaliacao"/>
+        <ratesMovie rdf:resource="http://example.org/ontologia_filmes#filme13"/>
+        <ratingValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ratingValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#avaliacao26 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#avaliacao26">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Avaliacao"/>
+        <ratesMovie rdf:resource="http://example.org/ontologia_filmes#filme14"/>
+        <ratingValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ratingValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#avaliacao27 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#avaliacao27">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Avaliacao"/>
+        <ratesMovie rdf:resource="http://example.org/ontologia_filmes#filme7"/>
+        <ratingValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ratingValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#avaliacao28 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#avaliacao28">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Avaliacao"/>
+        <ratesMovie rdf:resource="http://example.org/ontologia_filmes#filme9"/>
+        <ratingValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ratingValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#avaliacao29 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#avaliacao29">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Avaliacao"/>
+        <ratesMovie rdf:resource="http://example.org/ontologia_filmes#filme15"/>
+        <ratingValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ratingValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#avaliacao3 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#avaliacao3">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Avaliacao"/>
+        <ratesMovie rdf:resource="http://example.org/ontologia_filmes#filme4"/>
+        <ratingValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ratingValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#avaliacao30 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#avaliacao30">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Avaliacao"/>
+        <ratesMovie rdf:resource="http://example.org/ontologia_filmes#filme15"/>
+        <ratingValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ratingValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#avaliacao31 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#avaliacao31">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Avaliacao"/>
+        <ratesMovie rdf:resource="http://example.org/ontologia_filmes#filme16"/>
+        <ratingValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ratingValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#avaliacao32 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#avaliacao32">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Avaliacao"/>
+        <ratesMovie rdf:resource="http://example.org/ontologia_filmes#filme16"/>
+        <ratingValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ratingValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#avaliacao33 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#avaliacao33">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Avaliacao"/>
+        <ratesMovie rdf:resource="http://example.org/ontologia_filmes#filme16"/>
+        <ratingValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ratingValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#avaliacao34 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#avaliacao34">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Avaliacao"/>
+        <ratesMovie rdf:resource="http://example.org/ontologia_filmes#filme13"/>
+        <ratingValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ratingValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#avaliacao35 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#avaliacao35">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Avaliacao"/>
+        <ratesMovie rdf:resource="http://example.org/ontologia_filmes#filme1"/>
+        <ratingValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ratingValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#avaliacao36 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#avaliacao36">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Avaliacao"/>
+        <ratesMovie rdf:resource="http://example.org/ontologia_filmes#filme2"/>
+        <ratingValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ratingValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#avaliacao37 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#avaliacao37">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Avaliacao"/>
+        <ratesMovie rdf:resource="http://example.org/ontologia_filmes#filme3"/>
+        <ratingValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ratingValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#avaliacao38 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#avaliacao38">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Avaliacao"/>
+        <ratesMovie rdf:resource="http://example.org/ontologia_filmes#filme7"/>
+        <ratingValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ratingValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#avaliacao39 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#avaliacao39">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Avaliacao"/>
+        <ratesMovie rdf:resource="http://example.org/ontologia_filmes#filme9"/>
+        <ratingValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ratingValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#avaliacao4 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#avaliacao4">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Avaliacao"/>
+        <ratesMovie rdf:resource="http://example.org/ontologia_filmes#filme5"/>
+        <ratingValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ratingValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#avaliacao40 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#avaliacao40">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Avaliacao"/>
+        <ratesMovie rdf:resource="http://example.org/ontologia_filmes#filme12"/>
+        <ratingValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ratingValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#avaliacao41 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#avaliacao41">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Avaliacao"/>
+        <ratesMovie rdf:resource="http://example.org/ontologia_filmes#filme14"/>
+        <ratingValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ratingValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#avaliacao42 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#avaliacao42">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Avaliacao"/>
+        <ratesMovie rdf:resource="http://example.org/ontologia_filmes#filme10"/>
+        <ratingValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ratingValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#avaliacao43 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#avaliacao43">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Avaliacao"/>
+        <ratesMovie rdf:resource="http://example.org/ontologia_filmes#filme5"/>
+        <ratingValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ratingValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#avaliacao44 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#avaliacao44">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Avaliacao"/>
+        <ratesMovie rdf:resource="http://example.org/ontologia_filmes#filme8"/>
+        <ratingValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ratingValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#avaliacao45 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#avaliacao45">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Avaliacao"/>
+        <ratesMovie rdf:resource="http://example.org/ontologia_filmes#filme11"/>
+        <ratingValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ratingValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#avaliacao46 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#avaliacao46">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Avaliacao"/>
+        <ratesMovie rdf:resource="http://example.org/ontologia_filmes#filme13"/>
+        <ratingValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ratingValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#avaliacao5 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#avaliacao5">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Avaliacao"/>
+        <ratesMovie rdf:resource="http://example.org/ontologia_filmes#filme12"/>
+        <ratingValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ratingValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#avaliacao6 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#avaliacao6">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Avaliacao"/>
+        <ratesMovie rdf:resource="http://example.org/ontologia_filmes#filme11"/>
+        <ratingValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ratingValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#avaliacao7 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#avaliacao7">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Avaliacao"/>
+        <ratesMovie rdf:resource="http://example.org/ontologia_filmes#filme6"/>
+        <ratingValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ratingValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#avaliacao8 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#avaliacao8">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Avaliacao"/>
+        <ratesMovie rdf:resource="http://example.org/ontologia_filmes#filme7"/>
+        <ratingValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ratingValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#avaliacao9 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#avaliacao9">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Avaliacao"/>
+        <ratesMovie rdf:resource="http://example.org/ontologia_filmes#filme6"/>
+        <ratingValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ratingValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#aventura -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#aventura">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Tema"/>
+        <themeName>Aventura</themeName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#bafta -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#bafta">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Premio"/>
+        <awardName>BAFTA</awardName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#christopherNolan -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#christopherNolan">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Diretor"/>
+        <personName>Christopher Nolan</personName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#comedia -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#comedia">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Tema"/>
+        <themeName>Comédia</themeName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#crime -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#crime">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Tema"/>
+        <themeName>Crime</themeName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#drama -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#drama">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Tema"/>
+        <themeName>Drama</themeName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#elijahWood -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#elijahWood">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Interprete"/>
+        <personName>Elijah Wood</personName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#fantasia -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#fantasia">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Tema"/>
+        <themeName>Fantasia</themeName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#faroeste -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#faroeste">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Tema"/>
+        <themeName>Faroeste</themeName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#ficcaoCientifica -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#ficcaoCientifica">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Tema"/>
+        <themeName>Ficção Científica</themeName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#filme1 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#filme1">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Filme"/>
+        <hasAward rdf:resource="http://example.org/ontologia_filmes#oscar"/>
+        <hasDirector rdf:resource="http://example.org/ontologia_filmes#frankDarabont"/>
+        <hasGenre rdf:resource="http://example.org/ontologia_filmes#drama"/>
+        <hasInterpreter rdf:resource="http://example.org/ontologia_filmes#morganFreeman"/>
+        <hasInterpreter rdf:resource="http://example.org/ontologia_filmes#timRobbins"/>
+        <hasWriter rdf:resource="http://example.org/ontologia_filmes#frankDarabont"/>
+        <nationality>USA</nationality>
+        <originalLanguage>Inglês</originalLanguage>
+        <originalTitle>The Shawshank Redemption</originalTitle>
+        <portugueseTitle>Um Sonho de Liberdade</portugueseTitle>
+        <productionYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1994</productionYear>
+        <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1995</releaseYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#filme10 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#filme10">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Filme"/>
+        <hasDirector rdf:resource="http://example.org/ontologia_filmes#alfredHitchcock"/>
+        <hasGenre rdf:resource="http://example.org/ontologia_filmes#suspense"/>
+        <hasInterpreter rdf:resource="http://example.org/ontologia_filmes#jamesStewart"/>
+        <nationality>USA</nationality>
+        <originalLanguage>Inglês</originalLanguage>
+        <originalTitle>Vertigo</originalTitle>
+        <portugueseTitle>Um Corpo que Cai</portugueseTitle>
+        <productionYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1958</productionYear>
+        <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1958</releaseYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#filme11 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#filme11">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Filme"/>
+        <hasAward rdf:resource="http://example.org/ontologia_filmes#bafta"/>
+        <hasAward rdf:resource="http://example.org/ontologia_filmes#goldenglobes"/>
+        <hasAward rdf:resource="http://example.org/ontologia_filmes#oscar"/>
+        <hasDirector rdf:resource="http://example.org/ontologia_filmes#francisfordCoppola"/>
+        <hasGenre rdf:resource="http://example.org/ontologia_filmes#crime"/>
+        <hasGenre rdf:resource="http://example.org/ontologia_filmes#drama"/>
+        <hasInterpreter rdf:resource="http://example.org/ontologia_filmes#alPacino"/>
+        <hasInterpreter rdf:resource="http://example.org/ontologia_filmes#marlonBrando"/>
+        <hasProducer rdf:resource="http://example.org/ontologia_filmes#fredRoos"/>
+        <hasWriter rdf:resource="http://example.org/ontologia_filmes#francisfordCoppola"/>
+        <hasWriter rdf:resource="http://example.org/ontologia_filmes#marioFrancescosPuzo"/>
+        <nationality>USA</nationality>
+        <originalLanguage>Inglês</originalLanguage>
+        <originalTitle>The Godfather</originalTitle>
+        <portugueseTitle>O Poderoso Chefão</portugueseTitle>
+        <productionYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1972</productionYear>
+        <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1972</releaseYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#filme12 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#filme12">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Filme"/>
+        <hasDirector rdf:resource="http://example.org/ontologia_filmes#christopherNolan"/>
+        <hasDirector rdf:resource="http://example.org/ontologia_filmes#martinScorsese"/>
+        <hasGenre rdf:resource="http://example.org/ontologia_filmes#crime"/>
+        <hasInterpreter rdf:resource="http://example.org/ontologia_filmes#samuelLJackson"/>
+        <nationality>Japão</nationality>
+        <originalLanguage>Japonês</originalLanguage>
+        <originalTitle>Bird</originalTitle>
+        <portugueseTitle>Pássaro</portugueseTitle>
+        <productionYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2010</productionYear>
+        <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2011</releaseYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#filme13 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#filme13">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Filme"/>
+        <hasDirector rdf:resource="http://example.org/ontologia_filmes#christopherNolan"/>
+        <hasGenre rdf:resource="http://example.org/ontologia_filmes#acao"/>
+        <hasGenre rdf:resource="http://example.org/ontologia_filmes#ficcaoCientifica"/>
+        <hasInterpreter rdf:resource="http://example.org/ontologia_filmes#anneHathaway"/>
+        <hasInterpreter rdf:resource="http://example.org/ontologia_filmes#matthewMcConaughey"/>
+        <nationality>USA</nationality>
+        <originalLanguage>Inglês</originalLanguage>
+        <originalTitle>Interstellar</originalTitle>
+        <portugueseTitle>Interestelar</portugueseTitle>
+        <productionYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2014</productionYear>
+        <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2014</releaseYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#filme14 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#filme14">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Filme"/>
+        <hasDirector rdf:resource="http://example.org/ontologia_filmes#quentinTarantino"/>
+        <hasGenre rdf:resource="http://example.org/ontologia_filmes#drama"/>
+        <hasGenre rdf:resource="http://example.org/ontologia_filmes#faroeste"/>
+        <hasInterpreter rdf:resource="http://example.org/ontologia_filmes#leonardoDiCaprio"/>
+        <hasInterpreter rdf:resource="http://example.org/ontologia_filmes#samuelLJackson"/>
+        <nationality>USA</nationality>
+        <originalLanguage>Inglês</originalLanguage>
+        <originalTitle>Django Unchained</originalTitle>
+        <portugueseTitle>Django Livre</portugueseTitle>
+        <productionYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2012</productionYear>
+        <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2013</releaseYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#filme15 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#filme15">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Filme"/>
+        <hasDirector rdf:resource="http://example.org/ontologia_filmes#martinScorsese"/>
+        <hasGenre rdf:resource="http://example.org/ontologia_filmes#crime"/>
+        <hasGenre rdf:resource="http://example.org/ontologia_filmes#drama"/>
+        <hasInterpreter rdf:resource="http://example.org/ontologia_filmes#leonardoDiCaprio"/>
+        <hasInterpreter rdf:resource="http://example.org/ontologia_filmes#robertDeNiro"/>
+        <nationality>USA</nationality>
+        <originalLanguage>Inglês</originalLanguage>
+        <originalTitle>The Irishman</originalTitle>
+        <portugueseTitle>O Irlandês</portugueseTitle>
+        <productionYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2019</productionYear>
+        <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2019</releaseYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#filme16 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#filme16">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Filme"/>
+        <hasDirector rdf:resource="http://example.org/ontologia_filmes#christopherNolan"/>
+        <hasGenre rdf:resource="http://example.org/ontologia_filmes#acao"/>
+        <hasGenre rdf:resource="http://example.org/ontologia_filmes#ficcaoCientifica"/>
+        <hasInterpreter rdf:resource="http://example.org/ontologia_filmes#leonardoDiCaprio"/>
+        <hasInterpreter rdf:resource="http://example.org/ontologia_filmes#tomHardy"/>
+        <nationality>USA/UK</nationality>
+        <originalLanguage>Inglês</originalLanguage>
+        <originalTitle>Pobres Criaturas</originalTitle>
+        <portugueseTitle>Poor Things</portugueseTitle>
+        <productionYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2023</productionYear>
+        <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2023</releaseYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#filme2 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#filme2">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Filme"/>
+        <hasAward rdf:resource="http://example.org/ontologia_filmes#goldenglobes"/>
+        <hasDirector rdf:resource="http://example.org/ontologia_filmes#quentinTarantino"/>
+        <hasGenre rdf:resource="http://example.org/ontologia_filmes#crime"/>
+        <hasGenre rdf:resource="http://example.org/ontologia_filmes#drama"/>
+        <hasInterpreter rdf:resource="http://example.org/ontologia_filmes#johnTravolta"/>
+        <hasInterpreter rdf:resource="http://example.org/ontologia_filmes#samuelLJackson"/>
+        <hasWriter rdf:resource="http://example.org/ontologia_filmes#quentinTarantinoRoteirista"/>
+        <nationality>USA</nationality>
+        <originalLanguage>Inglês</originalLanguage>
+        <originalTitle>Pulp Fiction</originalTitle>
+        <portugueseTitle>Pulp Fiction: Tempo de Violência</portugueseTitle>
+        <productionYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1994</productionYear>
+        <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1994</releaseYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#filme3 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#filme3">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Filme"/>
+        <hasDirector rdf:resource="http://example.org/ontologia_filmes#quentinTarantino"/>
+        <hasGenre rdf:resource="http://example.org/ontologia_filmes#comedia"/>
+        <hasGenre rdf:resource="http://example.org/ontologia_filmes#crime"/>
+        <hasInterpreter rdf:resource="http://example.org/ontologia_filmes#merylStreep"/>
+        <hasInterpreter rdf:resource="http://example.org/ontologia_filmes#morganFreeman"/>
+        <nationality>USA</nationality>
+        <originalLanguage>Inglês</originalLanguage>
+        <originalTitle>Motoqueiro Fantasma</originalTitle>
+        <portugueseTitle>Ghost Rider</portugueseTitle>
+        <productionYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2023</productionYear>
+        <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2024</releaseYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#filme4 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#filme4">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Filme"/>
+        <hasDirector rdf:resource="http://example.org/ontologia_filmes#christopherNolan"/>
+        <hasGenre rdf:resource="http://example.org/ontologia_filmes#ficcaoCientifica"/>
+        <hasInterpreter rdf:resource="http://example.org/ontologia_filmes#leonardoDiCaprio"/>
+        <nationality>USA</nationality>
+        <originalLanguage>Inglês</originalLanguage>
+        <originalTitle>Inception</originalTitle>
+        <portugueseTitle>A Origem</portugueseTitle>
+        <productionYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2010</productionYear>
+        <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2010</releaseYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#filme5 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#filme5">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Filme"/>
+        <hasDirector rdf:resource="http://example.org/ontologia_filmes#martinScorsese"/>
+        <hasGenre rdf:resource="http://example.org/ontologia_filmes#crime"/>
+        <hasInterpreter rdf:resource="http://example.org/ontologia_filmes#robertDeNiro"/>
+        <nationality>USA</nationality>
+        <originalLanguage>Inglês</originalLanguage>
+        <originalTitle>Goodfellas</originalTitle>
+        <portugueseTitle>Os Bons Companheiros</portugueseTitle>
+        <productionYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1990</productionYear>
+        <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1990</releaseYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#filme6 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#filme6">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Filme"/>
+        <hasDirector rdf:resource="http://example.org/ontologia_filmes#stevenSpielberg"/>
+        <hasGenre rdf:resource="http://example.org/ontologia_filmes#aventura"/>
+        <hasInterpreter rdf:resource="http://example.org/ontologia_filmes#harrisonFord"/>
+        <hasProducer rdf:resource="http://example.org/ontologia_filmes#kathleenKennedy"/>
+        <nationality>USA</nationality>
+        <originalLanguage>Inglês</originalLanguage>
+        <originalTitle>Raiders of the Lost Ark</originalTitle>
+        <portugueseTitle>Os Caçadores da Arca Perdida</portugueseTitle>
+        <productionYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1981</productionYear>
+        <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1981</releaseYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#filme7 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#filme7">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Filme"/>
+        <hasDirector rdf:resource="http://example.org/ontologia_filmes#peterJackson"/>
+        <hasGenre rdf:resource="http://example.org/ontologia_filmes#fantasia"/>
+        <hasInterpreter rdf:resource="http://example.org/ontologia_filmes#elijahWood"/>
+        <hasProducer rdf:resource="http://example.org/ontologia_filmes#peterJackson"/>
+        <nationality>New Zealand</nationality>
+        <originalLanguage>Inglês</originalLanguage>
+        <originalTitle>The Lord of the Rings: The Fellowship of the Ring</originalTitle>
+        <portugueseTitle>O Senhor dos Anéis: A Sociedade do Anel</portugueseTitle>
+        <productionYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2001</productionYear>
+        <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2001</releaseYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#filme8 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#filme8">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Filme"/>
+        <hasDirector rdf:resource="http://example.org/ontologia_filmes#ridleyScott"/>
+        <hasGenre rdf:resource="http://example.org/ontologia_filmes#ficcaoCientifica"/>
+        <hasInterpreter rdf:resource="http://example.org/ontologia_filmes#sigourneyWeaver"/>
+        <nationality>USA</nationality>
+        <originalLanguage>Inglês</originalLanguage>
+        <originalTitle>Alien</originalTitle>
+        <portugueseTitle>Alien - O 8º Passageiro</portugueseTitle>
+        <productionYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1979</productionYear>
+        <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1979</releaseYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#filme9 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#filme9">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Filme"/>
+        <hasDirector rdf:resource="http://example.org/ontologia_filmes#stanleyKubrick"/>
+        <hasGenre rdf:resource="http://example.org/ontologia_filmes#ficcaoCientifica"/>
+        <hasInterpreter rdf:resource="http://example.org/ontologia_filmes#keirDullea"/>
+        <nationality>UK/USA</nationality>
+        <originalLanguage>Inglês</originalLanguage>
+        <originalTitle>2001: A Space Odyssey</originalTitle>
+        <portugueseTitle>2001: Uma Odisseia no Espaço</portugueseTitle>
+        <productionYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1968</productionYear>
+        <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1968</releaseYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#francisfordCoppola -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#francisfordCoppola">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Diretor"/>
+        <personName>Francis Ford Coppola</personName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#frankDarabont -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#frankDarabont">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Diretor"/>
+        <personName>Frank Darabont</personName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#fredRoos -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#fredRoos">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Produtor"/>
+        <personName>Fred Roos</personName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#goldenglobes -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#goldenglobes">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Premio"/>
+        <awardName>Golden Globes</awardName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#harrisonFord -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#harrisonFord">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Interprete"/>
+        <personName>Harrison Ford</personName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#jamesStewart -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#jamesStewart">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Interprete"/>
+        <personName>James Stewart</personName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#jerryBruckheimer -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#jerryBruckheimer">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Produtor"/>
+        <personName>Jerry Bruckheimer</personName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#johnTravolta -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#johnTravolta">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Interprete"/>
+        <personName>John Travolta</personName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#kathleenKennedy -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#kathleenKennedy">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Produtor"/>
+        <personName>Kathleen Kennedy</personName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#keirDullea -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#keirDullea">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Interprete"/>
+        <personName>Keir Dullea</personName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#leonardoDiCaprio -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#leonardoDiCaprio">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Interprete"/>
+        <personName>Leonardo DiCaprio</personName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#marioFrancescosPuzo -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#marioFrancescosPuzo">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Roteirista"/>
+        <personName>Mario Francescos Puzo</personName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#marlonBrando -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#marlonBrando">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Interprete"/>
+        <personName>Marlon Brando</personName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#martinScorsese -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#martinScorsese">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Diretor"/>
+        <personName>Martin Scorsese</personName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#matthewMcConaughey -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#matthewMcConaughey">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Interprete"/>
+        <personName>Matthew McConaughey</personName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#merylStreep -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#merylStreep">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Interprete"/>
+        <personName>Meryl Streep</personName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#morganFreeman -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#morganFreeman">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Interprete"/>
+        <personName>Morgan Freeman</personName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#oscar -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#oscar">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Premio"/>
+        <awardName>Oscar</awardName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#peterJackson -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#peterJackson">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Diretor"/>
+        <personName>Peter Jackson</personName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#quentinTarantino -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#quentinTarantino">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Diretor"/>
+        <personName>Quentin Tarantino</personName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#quentinTarantinoRoteirista -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#quentinTarantinoRoteirista">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Roteirista"/>
+        <personName>Quentin Tarantino</personName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#ridleyScott -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#ridleyScott">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Diretor"/>
+        <personName>Ridley Scott</personName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#robertDeNiro -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#robertDeNiro">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Interprete"/>
+        <personName>Robert De Niro</personName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#romance -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#romance">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Tema"/>
+        <themeName>Romance</themeName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#samuelLJackson -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#samuelLJackson">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Interprete"/>
+        <personName>Samuel L. Jackson</personName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#sigourneyWeaver -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#sigourneyWeaver">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Interprete"/>
+        <personName>Sigourney Weaver</personName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#stanleyKubrick -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#stanleyKubrick">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Diretor"/>
+        <personName>Stanley Kubrick</personName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#stevenSpielberg -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#stevenSpielberg">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Diretor"/>
+        <personName>Steven Spielberg</personName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#suspense -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#suspense">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Tema"/>
+        <themeName>Suspense</themeName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#timRobbins -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#timRobbins">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Interprete"/>
+        <personName>Tim Robbins</personName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#tomCruise -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#tomCruise">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Interprete"/>
+        <personName>Tom Cruise</personName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#tomHardy -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#tomHardy">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Interprete"/>
+        <personName>Tom Hardy</personName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#usuario1 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#usuario1">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Usuario"/>
+        <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao1"/>
+        <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao13"/>
+        <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao15"/>
+        <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao29"/>
+        <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao37"/>
+        <prefersGenre rdf:resource="http://example.org/ontologia_filmes#acao"/>
+        <prefersGenre rdf:resource="http://example.org/ontologia_filmes#comedia"/>
+        <prefersInterpreter rdf:resource="http://example.org/ontologia_filmes#tomCruise"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</age>
+        <email>joao@email.com</email>
+        <userName>joao123</userName>
+        <whatsapp>+5511999999999</whatsapp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#usuario10 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#usuario10">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Usuario"/>
+        <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao28"/>
+        <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao46"/>
+        <prefersGenre rdf:resource="http://example.org/ontologia_filmes#acao"/>
+        <prefersInterpreter rdf:resource="http://example.org/ontologia_filmes#johnTravolta"/>
+        <prefersInterpreter rdf:resource="http://example.org/ontologia_filmes#tomCruise"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">27</age>
+        <email>eidi@gmail.com.br</email>
+        <userName>eidi1999</userName>
+        <whatsapp>+551140028922</whatsapp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#usuario11 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#usuario11">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Usuario"/>
+        <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao21"/>
+        <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao22"/>
+        <prefersGenre rdf:resource="http://example.org/ontologia_filmes#acao"/>
+        <prefersGenre rdf:resource="http://example.org/ontologia_filmes#ficcaoCientifica"/>
+        <prefersInterpreter rdf:resource="http://example.org/ontologia_filmes#leonardoDiCaprio"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">29</age>
+        <email>lucas@email.com</email>
+        <userName>lucas2022</userName>
+        <whatsapp>+5511987654321</whatsapp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#usuario12 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#usuario12">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Usuario"/>
+        <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao23"/>
+        <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao24"/>
+        <prefersGenre rdf:resource="http://example.org/ontologia_filmes#drama"/>
+        <prefersGenre rdf:resource="http://example.org/ontologia_filmes#suspense"/>
+        <prefersInterpreter rdf:resource="http://example.org/ontologia_filmes#merylStreep"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">42</age>
+        <email>julia@email.com</email>
+        <userName>julia1980</userName>
+        <whatsapp>+5511976543210</whatsapp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#usuario13 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#usuario13">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Usuario"/>
+        <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao33"/>
+        <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao34"/>
+        <prefersGenre rdf:resource="http://example.org/ontologia_filmes#acao"/>
+        <prefersGenre rdf:resource="http://example.org/ontologia_filmes#ficcaoCientifica"/>
+        <prefersInterpreter rdf:resource="http://example.org/ontologia_filmes#tomHardy"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">31</age>
+        <email>rafael@email.com</email>
+        <userName>rafael1991</userName>
+        <whatsapp>+5511965432109</whatsapp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#usuario2 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#usuario2">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Usuario"/>
+        <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao16"/>
+        <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao2"/>
+        <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao30"/>
+        <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao38"/>
+        <prefersGenre rdf:resource="http://example.org/ontologia_filmes#drama"/>
+        <prefersInterpreter rdf:resource="http://example.org/ontologia_filmes#merylStreep"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</age>
+        <email>maria@email.com</email>
+        <userName>maria456</userName>
+        <whatsapp>+5511888888888</whatsapp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#usuario3 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#usuario3">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Usuario"/>
+        <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao17"/>
+        <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao3"/>
+        <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao31"/>
+        <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao39"/>
+        <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao4"/>
+        <prefersGenre rdf:resource="http://example.org/ontologia_filmes#ficcaoCientifica"/>
+        <prefersInterpreter rdf:resource="http://example.org/ontologia_filmes#leonardoDiCaprio"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">28</age>
+        <email>ana@email.com</email>
+        <userName>ana789</userName>
+        <whatsapp>+5511977777777</whatsapp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#usuario4 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#usuario4">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Usuario"/>
+        <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao18"/>
+        <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao32"/>
+        <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao40"/>
+        <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao5"/>
+        <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao6"/>
+        <prefersGenre rdf:resource="http://example.org/ontologia_filmes#crime"/>
+        <prefersInterpreter rdf:resource="http://example.org/ontologia_filmes#robertDeNiro"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35</age>
+        <email>carlos@email.com</email>
+        <userName>carlos101</userName>
+        <whatsapp>+5511966666666</whatsapp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#usuario5 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#usuario5">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Usuario"/>
+        <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao19"/>
+        <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao35"/>
+        <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao41"/>
+        <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao7"/>
+        <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao8"/>
+        <prefersGenre rdf:resource="http://example.org/ontologia_filmes#aventura"/>
+        <prefersInterpreter rdf:resource="http://example.org/ontologia_filmes#harrisonFord"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</age>
+        <email>laura@email.com</email>
+        <userName>laura555</userName>
+        <whatsapp>+5511955555555</whatsapp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#usuario6 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#usuario6">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Usuario"/>
+        <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao10"/>
+        <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao20"/>
+        <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao36"/>
+        <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao42"/>
+        <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao9"/>
+        <prefersGenre rdf:resource="http://example.org/ontologia_filmes#fantasia"/>
+        <prefersInterpreter rdf:resource="http://example.org/ontologia_filmes#elijahWood"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</age>
+        <email>pedro@email.com</email>
+        <userName>pedro777</userName>
+        <whatsapp>+5511944444444</whatsapp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#usuario7 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#usuario7">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Usuario"/>
+        <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao11"/>
+        <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao12"/>
+        <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao25"/>
+        <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao43"/>
+        <prefersGenre rdf:resource="http://example.org/ontologia_filmes#ficcaoCientifica"/>
+        <prefersInterpreter rdf:resource="http://example.org/ontologia_filmes#sigourneyWeaver"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">33</age>
+        <email>lucia@email.com</email>
+        <userName>lucia888</userName>
+        <whatsapp>+5511933333333</whatsapp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#usuario8 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#usuario8">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Usuario"/>
+        <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao13"/>
+        <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao26"/>
+        <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao44"/>
+        <prefersGenre rdf:resource="http://example.org/ontologia_filmes#suspense"/>
+        <prefersInterpreter rdf:resource="http://example.org/ontologia_filmes#jamesStewart"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</age>
+        <email>roberto@email.com</email>
+        <userName>roberto999</userName>
+        <whatsapp>+5511922222222</whatsapp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#usuario9 -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#usuario9">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Usuario"/>
+        <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao14"/>
+        <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao27"/>
+        <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao45"/>
+        <prefersGenre rdf:resource="http://example.org/ontologia_filmes#crime"/>
+        <prefersInterpreter rdf:resource="http://example.org/ontologia_filmes#alPacino"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</age>
+        <email>sandra@email.com</email>
+        <userName>sandra1010</userName>
+        <whatsapp>+5511911111111</whatsapp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/ontologia_filmes#williamGoldman -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#williamGoldman">
+        <rdf:type rdf:resource="http://example.org/ontologia_filmes#Roteirista"/>
+        <personName>William Goldman</personName>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
