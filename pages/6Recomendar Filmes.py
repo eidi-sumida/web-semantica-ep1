@@ -86,7 +86,7 @@ if st.button("Recomendar Filmes"):
             title = movie.originalTitle[0] if isinstance(movie.originalTitle, list) else movie.originalTitle
             year = movie.releaseYear[0] if isinstance(movie.releaseYear, list) else movie.releaseYear
             avg_rating = get_average_rating(movie)
-            st.text(f"{i+1} - {title} ({year}) - Pontuação: {score} - Avaliação média: {avg_rating:.2f}")
+            st.text(f"{i+1} - {title} ({year}) - Pontuação: {score:.2f} - Avaliação média: {avg_rating:.2f}")
     else:
         st.text("Não há recomendações disponíveis para este usuário.")
 
