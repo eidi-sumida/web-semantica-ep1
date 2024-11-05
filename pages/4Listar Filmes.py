@@ -7,12 +7,15 @@ cols[0].image("amazing_video.webp", width=100)
 cols[1].title("Listar Filmes")
 st.markdown("---")
 
+# Carregar a ontologia
+onto = st.session_state.onto
+
 def get_movie_details(movie):
     directors = [director.personName[0] if isinstance(director.personName, list) else director.personName for director in movie.hasDirector]
     interpreters = [interpreter.personName[0] if isinstance(interpreter.personName, list) else interpreter.personName for interpreter in movie.hasInterpreter]
     genres = [genre.themeName[0] if isinstance(genre.themeName, list) else genre.themeName for genre in movie.hasGenre]
     ratings = [rating.ratingValue[0] if isinstance(rating.ratingValue, list) else rating.ratingValue 
-               for rating in st.session_state.onto.Avaliacao.instances() 
+               for rating in onto.Avaliacao.instances() 
                if rating.ratesMovie[0] == movie]
     
     avg_rating = f"{sum(ratings) / len(ratings):.1f}" if ratings else "-"
@@ -32,13 +35,13 @@ def get_movie_details(movie):
     }
 
 # Exibir detalhes de um filme específico
-if st.session_state.onto.Filme.instances():
+if onto.Filme.instances():
     selected_movie = st.selectbox("Selecione um filme para ver mais detalhes:", 
                                   [movie.originalTitle[0] if isinstance(movie.originalTitle, list) else movie.originalTitle 
-                                   for movie in st.session_state.onto.Filme.instances()])
+                                   for movie in onto.Filme.instances()])
     
     if selected_movie:
-        movie = next(movie for movie in st.session_state.onto.Filme.instances() 
+        movie = next(movie for movie in onto.Filme.instances() 
                      if (movie.originalTitle[0] if isinstance(movie.originalTitle, list) else movie.originalTitle) == selected_movie)
         
         cols = st.columns([1,1,1])
@@ -47,9 +50,9 @@ if st.session_state.onto.Filme.instances():
             cols[0].write(f"**{key}:** {value}")
         
         cols[1].write("**Avaliações individuais:**")
-        ratings = [rating for rating in st.session_state.onto.Avaliacao.instances() if rating.ratesMovie[0] == movie]
+        ratings = [rating for rating in onto.Avaliacao.instances() if rating.ratesMovie[0] == movie]
         for rating in ratings:
-            user = next(user for user in st.session_state.onto.Usuario.instances() if rating in user.hasRating)
+            user = next(user for user in onto.Usuario.instances() if rating in user.hasRating)
             user_name = user.userName[0] if isinstance(user.userName, list) else user.userName
             rating_value = rating.ratingValue[0] if isinstance(rating.ratingValue, list) else rating.ratingValue
             cols[1].write(f"- {user_name}: {rating_value} estrelas")
@@ -61,7 +64,7 @@ st.markdown("---")
 list_option = st.selectbox("Listar por:", ["Todos", "Ator/Atriz", "Gênero"])
 
 if list_option == "Todos":
-    movies = [get_movie_details(movie) for movie in st.session_state.onto.Filme.instances()]
+    movies = [get_movie_details(movie) for movie in onto.Filme.instances()]
     df = pd.DataFrame(movies)
     st.table(df)
 
@@ -69,7 +72,7 @@ if list_option == "Todos":
 elif list_option == "Ator/Atriz":
 
     interpreters = list(set([interpreter.personName[0] if isinstance(interpreter.personName, list) else interpreter.personName 
-                             for movie in st.session_state.onto.Filme.instances() 
+                             for movie in onto.Filme.instances() 
                              for interpreter in movie.hasInterpreter]))
     
     interpreters.sort()
@@ -77,7 +80,7 @@ elif list_option == "Ator/Atriz":
     selected_actor = st.selectbox("Selecione um Ator/Atriz", interpreters)
 
     if selected_actor:
-        movies = [get_movie_details(movie) for movie in st.session_state.onto.Filme.instances() 
+        movies = [get_movie_details(movie) for movie in onto.Filme.instances() 
                   if any(selected_actor.lower() in (interpreter.personName[0] if isinstance(interpreter.personName, list) else interpreter.personName).lower() 
                          for interpreter in movie.hasInterpreter)]
         if movies:
@@ -88,10 +91,10 @@ elif list_option == "Ator/Atriz":
 
 elif list_option == "Gênero":
     genres = list(set([genre.themeName[0] if isinstance(genre.themeName, list) else genre.themeName 
-                       for movie in st.session_state.onto.Filme.instances() 
+                       for movie in onto.Filme.instances() 
                        for genre in movie.hasGenre]))
     genre = st.selectbox("Gênero", genres)
-    movies = [get_movie_details(movie) for movie in st.session_state.onto.Filme.instances() 
+    movies = [get_movie_details(movie) for movie in onto.Filme.instances() 
               if any(genre.lower() == (g.themeName[0] if isinstance(g.themeName, list) else g.themeName).lower() for g in movie.hasGenre)]
     if movies:
         df = pd.DataFrame(movies)

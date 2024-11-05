@@ -6,39 +6,42 @@ cols[0].image("amazing_video.webp", width=100)
 cols[1].title("Cadastrar Usuário")
 st.markdown("---")
 
+# Carregar a ontologia
+onto = st.session_state.onto
+
 # Função para obter todos os themeName distintos
 def get_distinct_theme_names():
     return list(set([theme.themeName[0] if isinstance(theme.themeName, list) else theme.themeName 
-                     for theme in st.session_state.onto.Tema.instances()]))
+                     for theme in onto.Tema.instances()]))
 
 # Função para obter todos os intérpretes
 def get_all_interpreters():
     return [interpreter.personName[0] if isinstance(interpreter.personName, list) else interpreter.personName 
-            for interpreter in st.session_state.onto.Interprete.instances()]
+            for interpreter in onto.Interprete.instances()]
 
 # Função para adicionar um novo usuário
 def add_user(name, age, email, whatsapp, preferred_genres, preferred_interpreters):
-    with st.session_state.onto:
+    with onto:
 
-        user_count = len(list(st.session_state.onto.Usuario.instances()))
+        user_count = len(list(onto.Usuario.instances()))
         user_id = f"usuario{user_count + 1}"
 
-        new_user = st.session_state.onto.Usuario(user_id)
+        new_user = onto.Usuario(user_id)
         new_user.userName.append(name)
         new_user.age.append(age)
         new_user.email.append(email)
         new_user.whatsapp.append(whatsapp)
         for genre in preferred_genres:
-            theme = next((t for t in st.session_state.onto.Tema.instances() 
+            theme = next((t for t in onto.Tema.instances() 
                           if t.themeName[0] == genre), None)
             if theme:
                 new_user.prefersGenre.append(theme)
         for interpreter in preferred_interpreters:
-            interp = next((i for i in st.session_state.onto.Interprete.instances() 
+            interp = next((i for i in onto.Interprete.instances() 
                            if i.personName[0] == interpreter), None)
             if interp:
                 new_user.prefersInterpreter.append(interp)
-    st.session_state.onto.save('ontologia_filmes.rdf')
+    onto.save('ontologia_filmes.rdf')
 
 # Layout em duas colunas
 col1, col2 = st.columns(2)
@@ -68,7 +71,7 @@ with col:
 st.markdown("---")
 st.subheader("Usuários Cadastrados")
 
-users = st.session_state.onto.Usuario.instances()
+users = onto.Usuario.instances()
 if users:
     for user in users:
         with st.expander(f"Usuário: {user.userName[0]} (ID: {user.name})"):

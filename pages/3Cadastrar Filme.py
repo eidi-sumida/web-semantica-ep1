@@ -6,24 +6,27 @@ cols[0].image("amazing_video.webp", width=100)
 cols[1].title("Cadastrar Filme")
 st.markdown("---")
 
+# Carregar a ontologia
+onto = st.session_state.onto
+
 # Funções auxiliares para obter listas de entidades existentes
 def get_existing_interpreters():
-    return [(i.name, i.personName[0]) for i in st.session_state.onto.Interprete.instances()]
+    return [(i.name, i.personName[0]) for i in onto.Interprete.instances()]
 
 def get_existing_directors():
-    return [(d.name, d.personName[0]) for d in st.session_state.onto.Diretor.instances()]
+    return [(d.name, d.personName[0]) for d in onto.Diretor.instances()]
 
 def get_existing_themes():
-    return [(t.name, t.themeName[0]) for t in st.session_state.onto.Tema.instances()]
+    return [(t.name, t.themeName[0]) for t in onto.Tema.instances()]
 
 # Função para adicionar um novo filme
 def add_movie(title, portuguese_title, year, release_year, directors, interpreters, genres, nationality, original_language):
-    with st.session_state.onto:
+    with onto:
 
-        movie_count = len(list(st.session_state.onto.Filme.instances()))
+        movie_count = len(list(onto.Filme.instances()))
         movie_id = f"filme{movie_count + 1}"
 
-        new_movie = st.session_state.onto.Filme(movie_id)
+        new_movie = onto.Filme(movie_id)
         new_movie.originalTitle.append(title)
         new_movie.portugueseTitle.append(portuguese_title)
         new_movie.productionYear.append(year)
@@ -33,20 +36,20 @@ def add_movie(title, portuguese_title, year, release_year, directors, interprete
 
         # Adicionar diretores
         for director in directors:
-            director_instance = st.session_state.onto.Diretor(director)
+            director_instance = onto.Diretor(director)
             new_movie.hasDirector.append(director_instance)
 
         # Adicionar intérpretes
         for interpreter in interpreters:
-            interpreter_instance = st.session_state.onto.Interprete(interpreter)
+            interpreter_instance = onto.Interprete(interpreter)
             new_movie.hasInterpreter.append(interpreter_instance)
 
         # Adicionar gêneros
         for genre in genres:
-            genre_instance = st.session_state.onto.Tema(genre)
+            genre_instance = onto.Tema(genre)
             new_movie.hasGenre.append(genre_instance)
 
-    st.session_state.onto.save('ontologia_filmes.rdf')
+    onto.save('ontologia_filmes.rdf')
 
 # Layout em duas colunas
 col1, col2 = st.columns(2)
@@ -94,7 +97,7 @@ if st.button("Adicionar Filme"):
 st.markdown("---")
 st.subheader("Filmes Cadastrados")
 
-movies = st.session_state.onto.Filme.instances()
+movies = onto.Filme.instances()
 if movies:
     for movie in movies:
         with st.expander(f"Filme: {movie.originalTitle[0]} (ID: {movie.name})"):
