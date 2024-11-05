@@ -43,6 +43,7 @@ if users:
             print(user.userName[0])
             print(rating)
             st.write(f"- {rating.ratesMovie[0].originalTitle[0]}: {rating.ratingValue[0]} estrelas")
+            # st.write(f"- {rating.ratesMovie[0].originalTitle[0]}: {rating.ratingValue[0]} estrelas ({rating.name}, {user.name})")
 
     st.markdown("---")
     # Criar um DataFrame com as informações dos usuários

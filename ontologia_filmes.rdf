@@ -1547,7 +1547,6 @@
 
     <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#usuario1">
         <rdf:type rdf:resource="http://example.org/ontologia_filmes#Usuario"/>
-        <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao1"/>
         <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao13"/>
         <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao15"/>
         <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao29"/>
@@ -1584,6 +1583,7 @@
 
     <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#usuario11">
         <rdf:type rdf:resource="http://example.org/ontologia_filmes#Usuario"/>
+        <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao1"/>
         <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao21"/>
         <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao22"/>
         <prefersGenre rdf:resource="http://example.org/ontologia_filmes#acao"/>
@@ -1635,8 +1635,8 @@
 
     <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#usuario2">
         <rdf:type rdf:resource="http://example.org/ontologia_filmes#Usuario"/>
+        <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao14"/>
         <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao16"/>
-        <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao2"/>
         <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao30"/>
         <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao38"/>
         <prefersGenre rdf:resource="http://example.org/ontologia_filmes#drama"/>
@@ -1653,7 +1653,7 @@
 
     <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#usuario3">
         <rdf:type rdf:resource="http://example.org/ontologia_filmes#Usuario"/>
-        <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao17"/>
+        <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao2"/>
         <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao3"/>
         <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao31"/>
         <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao39"/>
@@ -1675,7 +1675,6 @@
         <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao18"/>
         <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao32"/>
         <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao40"/>
-        <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao5"/>
         <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao6"/>
         <prefersGenre rdf:resource="http://example.org/ontologia_filmes#crime"/>
         <prefersInterpreter rdf:resource="http://example.org/ontologia_filmes#robertDeNiro"/>
@@ -1747,6 +1746,7 @@
 
     <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#usuario8">
         <rdf:type rdf:resource="http://example.org/ontologia_filmes#Usuario"/>
+        <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao17"/>
         <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao13"/>
         <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao26"/>
         <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao44"/>
@@ -1764,7 +1764,7 @@
 
     <owl:NamedIndividual rdf:about="http://example.org/ontologia_filmes#usuario9">
         <rdf:type rdf:resource="http://example.org/ontologia_filmes#Usuario"/>
-        <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao14"/>
+        <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao5"/>
         <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao27"/>
         <hasRating rdf:resource="http://example.org/ontologia_filmes#avaliacao45"/>
         <prefersGenre rdf:resource="http://example.org/ontologia_filmes#crime"/>
